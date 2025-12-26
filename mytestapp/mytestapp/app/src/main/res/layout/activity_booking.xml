@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".BookingActivity">
+
+    <!-- 頂部區塊：返回按鈕、活動名稱、日期 -->
+
+    <TextView
+        android:id="@+id/textViewBookingEventName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/buttonBack"
+        app:layout_constraintTop_toTopOf="@id/buttonBack"
+        tools:text="活動名稱" />
+
+    <TextView
+        android:id="@+id/textQuantityStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelStudentTicket"
+        app:layout_constraintEnd_toStartOf="@id/buttonPlusStudent" />
+
+    <Button
+        android:id="@+id/buttonPlusFull"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelFullTicket"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textQuantityConcession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelConcessionTicket"
+        app:layout_constraintEnd_toStartOf="@id/buttonPlusConcession" />
+
+    <Button
+        android:id="@+id/buttonMinusFull"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelFullTicket"
+        app:layout_constraintEnd_toStartOf="@id/textQuantityFull" />
+
+    <Button
+        android:id="@+id/buttonMinusConcession"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelConcessionTicket"
+        app:layout_constraintEnd_toStartOf="@id/textQuantityConcession" />
+
+    <Button
+        android:id="@+id/buttonPlusStudent"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelStudentTicket"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMinusStudent"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelStudentTicket"
+        app:layout_constraintEnd_toStartOf="@id/textQuantityStudent" />
+
+    <TextView
+        android:id="@+id/labelStudentTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="學生票\n$120"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelConcessionTicket" />
+
+    <TextView
+        android:id="@+id/textQuantityFull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelFullTicket"
+        app:layout_constraintEnd_toStartOf="@id/buttonPlusFull" />
+
+    <TextView
+        android:id="@+id/labelFullTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="全票\n$280"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBack" />
+
+    <Button
+        android:id="@+id/buttonPlusConcession"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelConcessionTicket"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="返回"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelConcessionTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="優待票\n$180"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelFullTicket" />
+
+    <TextView
+        android:id="@+id/textViewBookingDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/textViewBookingEventName"
+        app:layout_constraintTop_toBottomOf="@id/textViewBookingEventName"
+        tools:text="2026-02-22" />
+
+
+    <!-- 全票區塊 -->
+
+
+    <!-- 優待票區塊 -->
+
+
+    <!-- 學生票區塊 -->
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="確認"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

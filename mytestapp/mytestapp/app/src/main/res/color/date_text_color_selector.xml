@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 被選中時 (activated)，文字為白色 -->
+    <item android:state_activated="true" android:color="@android:color/white"/>
+    <!-- 預設情況，文字為黑色 -->
+    <item android:color="@android:color/black"/>
+</selector>
